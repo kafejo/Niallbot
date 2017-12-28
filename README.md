@@ -69,7 +69,6 @@ import json
 
 def lambda_handler(event, context):
     
-    print(event)
     payload = json.dumps({"response_url": event["response_url"]})
     
     if event['text'] == 'downloads':
