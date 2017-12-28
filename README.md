@@ -106,3 +106,6 @@ lambda_handler({'is_debug': True, 'response_url': 'test'}, {})
 ```
 
 When you pass `is_debug = True`, it will just print the composed slack message to console.
+
+## License
+MIT
