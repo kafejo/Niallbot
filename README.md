@@ -1,5 +1,5 @@
 # NiallBot
-Slack slash command for iOS and Android download stats designed for AWS Lambda.
+Slack slash command for iOS and Android download stats designed for AWS Lambda deployment.
 
 <img src="resources/screenshot.png" width="600"/>
 
