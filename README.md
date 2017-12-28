@@ -108,7 +108,7 @@ lambda_handler({'is_debug': True, 'response_url': 'test'}, {})
 When you pass `is_debug = True`, it will just print the composed slack message to console.
 
 ## Why NiallBot?
-Cause at @rubicoin (before NiallBot), these reports were usually done by our User Acquisition Manager **Niall**.
+Cause at [@rubicoin](https://github.com/Rubicoin) (before NiallBot), these reports were usually done by our User Acquisition Manager **Niall**.
 
 ## License
 MIT
