@@ -39,7 +39,8 @@ These have special format how to define them. Use `|` to separate items in array
 'OVERALL_REPORT_IDS' = 'com.test.app1~20160203;App 1|com.test.app2~22350522;App 2'
 ```
 This will generate a report like this:
-// TODO: Include screenshot
+
+<img src="resources/screenshot-two-apps.png" width="500"/>
 
 As you can see, there we are reporting two iOS apps (iOS App 1 and iOS App 2) and two Android apps (Android App 1 and Android App 2) and in the overall report we combine iOS and Android apps (iOS App 1 and Android App 1) and (iOS App 2 and Android App 2).
 
@@ -56,7 +57,7 @@ You can simply adjust the configuration to suit your needs. For example report f
 'OVERALL_REPORT_IDS' = 'com.test.app1~20160203;App 1'  #SKU or app_id separated by ~;title
 ```
 
-// TODO: - Include screenshot
+<img src="resources/screenshot-single-app.png" width="500"/>
 
 ### How to setup AWS Lambda
 Due to the nature of iTunes Connect API, it takes around 10-20 seconds to download all the reports (depending on month, report needed for each day). Slack slashcommand requires you to respond within 3 seconds. That's why I designed it in a way that one lambda handles all the slash commands and if needed invokes asynchronously another lambda and passes `response_url` (the slack url to respond). Here's example of our lambda function that is being triggered by the slack slash command:
@@ -68,7 +69,6 @@ import json
 
 def lambda_handler(event, context):
     
-    print(event)
     payload = json.dumps({"response_url": event["response_url"]})
     
     if event['text'] == 'downloads':
