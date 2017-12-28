@@ -29,9 +29,8 @@ def lambda_handler(event, context):
     gpc_reporter = GooglePlayReporter(GPLAY_SERVICE_ACC, GPLAY_CFG_JSON)
 
     # Create Niallbot
-    niallBot = NiallBot(slacker, itc_reporter, gpc_reporter)
+    niallbot = NiallBot(slacker, itc_reporter, gpc_reporter)
 
-    # Download statistics and
-    niallBot.report_statistics()
+    niallbot.report_statistics()
 
     return "200 OK"
