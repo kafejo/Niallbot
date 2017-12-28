@@ -23,6 +23,6 @@ class GooglePlayReporter:
         storage = build('storage', 'v1', http=credentials.authorize(Http()))
         content = storage.objects().get_media(bucket=cloud_storage_bucket, object=report_to_download).execute()
         decoded_content = content.decode('utf-16')
-        installs = list(csv.reader(decoded_content.splitlines(), delimiter='\t'))
+        installs = list(csv.reader(decoded_content.splitlines(), delimiter=','))
 
         return installs
