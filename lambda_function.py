@@ -18,9 +18,9 @@ def lambda_handler(event, context):
 
     # Grab the Slack response url
     slack_response_url = event['response_url']
-    is_debug = event['is_debug']
-
-    if is_debug is None:
+    try:
+        is_debug = event['is_debug']
+    except KeyError:
         is_debug = False
 
     # Create a slacker, itc and gplay reporters
